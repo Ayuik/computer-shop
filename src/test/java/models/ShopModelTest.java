@@ -50,4 +50,13 @@ public class ShopModelTest {
         assertThat(taxID, is(123456789L));
     }
 
+    @Test
+    @DisplayName("Should set the name of the shop")
+    void testSetName() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.setName("Computer Shop");
+        assertThat(shopModel.getName(), is("Computer Shop"));
+    }
+    
+
 }
