@@ -46,7 +46,7 @@ public class ShopModelTest {
     void testGetTaxID() {
         ShopModel shopModel = new ShopModel();
         shopModel.taxID = 123456789L;
-        String taxID = shopModel.getTaxID();
+        long taxID = shopModel.getTaxID();
         assertThat(taxID, is(123456789L));
     }
 

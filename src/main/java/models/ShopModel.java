@@ -19,4 +19,8 @@ public class ShopModel {
         return owner;
     }
 
+    public long getTaxID() {
+        return taxID;
+    }
+
 }
