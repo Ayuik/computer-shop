@@ -27,5 +27,7 @@ public class ShopModel {
         this.name = name;
     }
 
-    
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
 }
