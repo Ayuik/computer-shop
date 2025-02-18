@@ -13,14 +13,14 @@ public class ShopModelTest {
     void testShopModel() {
     String name = "Computer Shop";
     String owner = "Ayelén";
-    String taxID = "123456789";
+    long taxID = 123456789;
 
     ShopModel shopModel = new ShopModel();
     shopModel.ShopModel(name, owner, taxID);
 
     assertThat(shopModel.name, is("Computer Shop"));
     assertThat(shopModel.owner, is("Ayelén"));
-    assertThat(shopModel.taxID, is("123456789"));
+    assertThat(shopModel.taxID, is(123456789));
 
     }
     
