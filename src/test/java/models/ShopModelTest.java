@@ -41,4 +41,13 @@ public class ShopModelTest {
         assertThat(owner, is("Ayelen"));
     }
 
+    @Test
+    @DisplayName("Should return the tax identification number of the shop")
+    void testGetTaxID() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.taxID = 123456789L;
+        String taxID = shopModel.getTaxID();
+        assertThat(taxID, is(123456789L));
+    }
+
 }
