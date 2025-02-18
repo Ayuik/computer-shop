@@ -13,6 +13,10 @@ public class ShopModel {
 
     public String getName() {
         return name;
-    }   
+    }
+
+    public String getOwner() {
+        return owner;
+    }
 
 }
