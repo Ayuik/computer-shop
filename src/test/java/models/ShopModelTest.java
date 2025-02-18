@@ -28,8 +28,17 @@ public class ShopModelTest {
     void testGetName() {
         ShopModel shopModel = new ShopModel();
         shopModel.name = "Computer Shop";
-        String name = shopModel.getName()
+        String name = shopModel.getName();
         assertThat(name, is("Computer Shop"));
+    }
+
+    @Test
+    @DisplayName("Should return the owner of the shop")
+    void testGetOwner() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.owner = "Ayelen";
+        String owner = shopModel.getOwner();
+        assertThat(owner, is("Ayelen"));
     }
 
 }

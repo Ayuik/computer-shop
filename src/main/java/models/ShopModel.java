@@ -11,4 +11,8 @@ public class ShopModel {
         this.taxID = taxID;
     }
 
+    public String getName() {
+        return name;
+    }   
+
 }
