@@ -65,6 +65,14 @@ public class ShopModelTest {
         shopModel.setOwner("Ayelen");
         assertThat(shopModel.getOwner(), is("Ayelen"));
     }
+
+    @Test
+    @DisplayName("Should set the tax identification number of the shop")
+    void testTaxID() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.setTaxID(123456789L);
+        assertThat(shopModel.getTaxID(), is(123456789L));
+    }
     
 
 }
