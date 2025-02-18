@@ -57,6 +57,14 @@ public class ShopModelTest {
         shopModel.setName("Computer Shop");
         assertThat(shopModel.getName(), is("Computer Shop"));
     }
+
+    @Test
+    @DisplayName("Should set the owner of the shop")
+    void testSetOwner() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.setOwner("Computer Shop");
+        assertThat(shopModel.getOwner(), is("Ayelen"));
+    }
     
 
 }
