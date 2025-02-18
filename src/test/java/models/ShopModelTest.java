@@ -13,15 +13,23 @@ public class ShopModelTest {
     void testShopModel() {
     String name = "Computer Shop";
     String owner = "Ayelén";
-    long taxID = 123456789;
+    long taxID = 123456789L;
 
     ShopModel shopModel = new ShopModel();
     shopModel.ShopModel(name, owner, taxID);
 
     assertThat(shopModel.name, is("Computer Shop"));
     assertThat(shopModel.owner, is("Ayelén"));
-    assertThat(shopModel.taxID, is(123456789));
-
+    assertThat(shopModel.taxID, is(123456789L));
     }
-    
+
+    @Test
+    @DisplayName("Should return the name of the shop")
+    void testGetName() {
+        ShopModel shopModel = new ShopModel();
+        shopModel.name = "Computer Shop";
+        String name = shopModel.getName()
+        assertThat(name, is("Computer Shop"));
+    }
+
 }
