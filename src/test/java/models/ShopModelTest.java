@@ -84,5 +84,12 @@ public class ShopModelTest {
         assertThat(shopModel.getComputerStock(), is(computerStock));
     }
     
+    @Test
+    @DisplayName("Should add a computer to the computer stock of the shop")
+    void testAddStock() {
+        computerModel = new ComputerModel("Lenovo", "Intel® Core™ Ultra 7", "32 GB", "Windows 11 Pro 64", 1999.00f);
+        shopModel.addStock(computerModel);
+        assertThat(shopModel.getComputerStock().size(), is(1));
+    }
 
 }
