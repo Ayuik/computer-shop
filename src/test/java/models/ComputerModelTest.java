@@ -40,7 +40,7 @@ public class ComputerModelTest {
     void testSetProcessor() {
         ComputerModel computerModel = new ComputerModel("Lenovo", "32 GB", "Intel® Core™ Ultra 7", "Windows 11 Pro 64", 1999.00f);
         computerModel.setProcessor("Intel® Core™ Ultra 9");
-        assertThat(computerModel.getProcessor(), is("Intel® Core™ Ultra 7"));        
+        assertThat(computerModel.getProcessor(), is("Intel® Core™ Ultra 9"));        
     }
     
 }

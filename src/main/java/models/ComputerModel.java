@@ -40,4 +40,8 @@ public class ComputerModel {
         this.memory = memory;
     }
 
+    public void setProcessor(String processor) {                
+        this.processor = processor;
+    }
+
 }
