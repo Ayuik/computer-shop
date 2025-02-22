@@ -18,5 +18,13 @@ public class ComputerModelTest {
         assertThat(computerModel.getOperatingSystem(), is("Windows 11 Pro 64"));
         assertThat(computerModel.getPrice(), is(1999.00f));        
     }
+
+    @Test
+    @DisplayName("Should set the brand of the computer")
+    void testSetBrand() {
+        ComputerModel computerModel = new ComputerModel("Lenovo", "32 GB", "Intel® Core™ Ultra 7", "Windows 11 Pro 64", 1999.00f);
+        computerModel.setBrand("HP");
+        assertThat(computerModel.getBrand(), is("HP"));        
+    }
     
 }
