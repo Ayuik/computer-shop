@@ -101,4 +101,15 @@ public class ShopModelTest {
         assertThat(shopModel.getComputerStock().size(), is(0));
     }
 
+    @Test
+    @DisplayName("Should search for a computer and retun the filtered list")
+    void testSearchStock() {
+        computerModel = new ComputerModel("Lenovo", "Intel® Core™ Ultra 7", "32 GB", "Windows 11 Pro 64", 1999.00f);
+        ComputerModel computerModelTwo = new ComputerModel("Mac", "Intel® Core™ Ultra 7", "32 GB", "Windows 11 Pro 64", 1999.00f);
+        shopModel.addStock(computerModel);
+        shopModel.addStock(computerModelTwo);
+        ArrayList<ComputerModel> filteredComputers = shopModel.searchStock("Lenovo");
+        assertThat(filteredComputers.size(), is(1));
+    }
+
 }
