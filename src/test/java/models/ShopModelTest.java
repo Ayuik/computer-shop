@@ -76,6 +76,13 @@ public class ShopModelTest {
         shopModel.setTaxID(987654321L);
         assertThat(shopModel.getTaxID(), is(987654321L));
     }
+
+    @Test
+    @DisplayName("Should set the computer stock of the shop")
+    void testSetComputerStock() {
+        shopModel.setComputerStock(computerStock);
+        assertThat(shopModel.getComputerStock(), is(computerStock));
+    }
     
 
 }
