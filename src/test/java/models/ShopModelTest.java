@@ -1,5 +1,6 @@
 package models;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -7,27 +8,24 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ShopModelTest {
+    ShopModel shopModel;
+
+    @BeforeEach
+    void setUp() {
+        shopModel = new ShopModel("Computer Shop", "Ayelen", 123456789L);
+    }
 
     @Test
     @DisplayName("Should create a ShopModel with a name, owner and a tax identification number")
     void testShopModel() {
-    String name = "Computer Shop";
-    String owner = "Ayelén";
-    long taxID = 123456789L;
-
-    ShopModel shopModel = new ShopModel();
-    shopModel.ShopModel(name, owner, taxID);
-
     assertThat(shopModel.name, is("Computer Shop"));
-    assertThat(shopModel.owner, is("Ayelén"));
+    assertThat(shopModel.owner, is("Ayelen"));
     assertThat(shopModel.taxID, is(123456789L));
     }
 
     @Test
     @DisplayName("Should return the name of the shop")
     void testGetName() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.name = "Computer Shop";
         String name = shopModel.getName();
         assertThat(name, is("Computer Shop"));
     }
@@ -35,8 +33,6 @@ public class ShopModelTest {
     @Test
     @DisplayName("Should return the owner of the shop")
     void testGetOwner() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.owner = "Ayelen";
         String owner = shopModel.getOwner();
         assertThat(owner, is("Ayelen"));
     }
@@ -44,8 +40,6 @@ public class ShopModelTest {
     @Test
     @DisplayName("Should return the tax identification number of the shop")
     void testGetTaxID() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.taxID = 123456789L;
         long taxID = shopModel.getTaxID();
         assertThat(taxID, is(123456789L));
     }
@@ -53,25 +47,22 @@ public class ShopModelTest {
     @Test
     @DisplayName("Should set the name of the shop")
     void testSetName() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.setName("Computer Shop");
-        assertThat(shopModel.getName(), is("Computer Shop"));
+        shopModel.setName("E Shop");
+        assertThat(shopModel.getName(), is("E Shop"));
     }
 
     @Test
     @DisplayName("Should set the owner of the shop")
     void testSetOwner() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.setOwner("Ayelen");
-        assertThat(shopModel.getOwner(), is("Ayelen"));
+        shopModel.setOwner("Maria");
+        assertThat(shopModel.getOwner(), is("Maria"));
     }
 
     @Test
     @DisplayName("Should set the tax identification number of the shop")
     void testTaxID() {
-        ShopModel shopModel = new ShopModel();
-        shopModel.setTaxID(123456789L);
-        assertThat(shopModel.getTaxID(), is(123456789L));
+        shopModel.setTaxID(987654321L);
+        assertThat(shopModel.getTaxID(), is(987654321L));
     }
     
 
