@@ -26,5 +26,13 @@ public class ComputerModelTest {
         computerModel.setBrand("HP");
         assertThat(computerModel.getBrand(), is("HP"));        
     }
+
+    @Test
+    @DisplayName("Should set the memory of the computer")
+    void testSetMemory() {
+        ComputerModel computerModel = new ComputerModel("Lenovo", "32 GB", "Intel® Core™ Ultra 7", "Windows 11 Pro 64", 1999.00f);
+        computerModel.setMemory("24 GB");
+        assertThat(computerModel.getMemory(), is("24 GB"));        
+    }
     
 }
