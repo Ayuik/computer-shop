@@ -44,4 +44,8 @@ public class ComputerModel {
         this.processor = processor;
     }
 
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }   
+
 }
