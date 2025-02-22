@@ -57,5 +57,15 @@ public class ShopModel {
     public void removeStock(String brand) {
         computerStock.removeIf(computerModel -> computerModel.getBrand().equals(brand));
     }
+
+    public ArrayList<ComputerModel> searchStock(String brand) {
+        ArrayList<ComputerModel> filteredComputers = new ArrayList<ComputerModel>();
+        for (ComputerModel computerModel : computerStock) {
+            if (computerModel.getBrand().equals(brand)) {
+                filteredComputers.add(computerModel);
+            }
+        }
+        return filteredComputers;
+    }   
     
 }
