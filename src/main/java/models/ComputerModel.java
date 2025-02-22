@@ -31,7 +31,7 @@ public class ComputerModel {
     public float getPrice() {
         return price;
     }
-
+    
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -46,6 +46,10 @@ public class ComputerModel {
 
     public void setOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
+    }   
+
+    public void setPrice(float price) {
+        this.price = price;
     }   
 
 }

@@ -55,8 +55,8 @@ public class ComputerModelTest {
     @DisplayName("Should set the price of the computer")
     void testSetPrice() {
         ComputerModel computerModel = new ComputerModel("Lenovo", "32 GB", "Intel® Core™ Ultra 7", "Windows 11 Pro 64", 1999.00f);
-        computerModel.setPrice(1849,99f);
-        assertThat(computerModel.getPrice(), is(1849,99f));        
+        computerModel.setPrice(1849.99f);
+        assertThat(computerModel.getPrice(), is(1849.99f));        
     }
 
     
