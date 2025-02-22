@@ -39,9 +39,13 @@ public class ShopModel {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-
+    
     public void setTaxID(long taxID) {
         this.taxID = taxID;
+    }
+
+    public void setComputerStock(ArrayList<ComputerModel> computerStock) {
+        this.computerStock = computerStock;
     }
 
     

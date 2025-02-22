@@ -72,7 +72,7 @@ public class ShopModelTest {
 
     @Test
     @DisplayName("Should set the tax identification number of the shop")
-    void testTaxID() {
+    void testSetTaxID() {
         shopModel.setTaxID(987654321L);
         assertThat(shopModel.getTaxID(), is(987654321L));
     }
