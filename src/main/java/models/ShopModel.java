@@ -5,7 +5,7 @@ public class ShopModel {
     String owner;
     long taxID;
 
-    public void ShopModel(String name, String owner, long taxID) {
+    public ShopModel(String name, String owner, long taxID) {
         this.name = name;
         this.owner = owner;
         this.taxID = taxID;
