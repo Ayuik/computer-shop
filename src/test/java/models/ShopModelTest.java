@@ -7,12 +7,16 @@ import org.junit.jupiter.api.Test;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
+import java.util.ArrayList;
+
 public class ShopModelTest {
     ShopModel shopModel;
+    ArrayList<ComputerModel> computerStock = new ArrayList<ComputerModel>();
+    ComputerModel computerModel;
 
     @BeforeEach
     void setUp() {
-        shopModel = new ShopModel("Computer Shop", "Ayelen", 123456789L);
+        shopModel = new ShopModel("Computer Shop", "Ayelen", 123456789L, computerStock);
     }
 
     @Test
@@ -21,6 +25,7 @@ public class ShopModelTest {
     assertThat(shopModel.name, is("Computer Shop"));
     assertThat(shopModel.owner, is("Ayelen"));
     assertThat(shopModel.taxID, is(123456789L));
+    assertThat(shopModel.computerStock, is(new ArrayList<ComputerModel>()));
     }
 
     @Test
@@ -42,6 +47,13 @@ public class ShopModelTest {
     void testGetTaxID() {
         long taxID = shopModel.getTaxID();
         assertThat(taxID, is(123456789L));
+    }
+
+    @Test
+    @DisplayName("Should return the tax identification number of the shop")
+    void testGetComputerStock() {
+        ArrayList<ComputerModel> computerStock = shopModel.getComputerStock();
+        assertThat(computerStock, is(new ArrayList<ComputerModel>()));
     }
 
     @Test
