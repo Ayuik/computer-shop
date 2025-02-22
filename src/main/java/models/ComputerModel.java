@@ -36,4 +36,8 @@ public class ComputerModel {
         this.brand = brand;
     }
 
+    public void setMemory(String memory) {
+        this.memory = memory;
+    }
+
 }

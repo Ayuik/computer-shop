@@ -34,5 +34,13 @@ public class ComputerModelTest {
         computerModel.setMemory("24 GB");
         assertThat(computerModel.getMemory(), is("24 GB"));        
     }
+
+    @Test
+    @DisplayName("Should set the processor of the computer")
+    void testSetProcessor() {
+        ComputerModel computerModel = new ComputerModel("Lenovo", "32 GB", "Intel® Core™ Ultra 7", "Windows 11 Pro 64", 1999.00f);
+        computerModel.setProcessor("Intel® Core™ Ultra 9");
+        assertThat(computerModel.getProcessor(), is("Intel® Core™ Ultra 7"));        
+    }
     
 }
