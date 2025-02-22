@@ -2,8 +2,6 @@ package models;
 
 import java.util.ArrayList;
 
-import javax.swing.text.html.HTMLDocument.Iterator;
-
 public class ShopModel {
     String name;
     String owner;
