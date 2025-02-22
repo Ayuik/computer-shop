@@ -48,5 +48,9 @@ public class ShopModel {
         this.computerStock = computerStock;
     }
 
+    public void addStock(ComputerModel computerModel) {
+        computerStock.add(computerModel);
+    }
+
     
 }
