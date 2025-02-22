@@ -92,4 +92,13 @@ public class ShopModelTest {
         assertThat(shopModel.getComputerStock().size(), is(1));
     }
 
+    @Test
+    @DisplayName("Should remove a computer from the computer stock of the shop")
+    void testRemoveStock() {
+        computerModel = new ComputerModel("Lenovo", "Intel® Core™ Ultra 7", "32 GB", "Windows 11 Pro 64", 1999.00f);
+        shopModel.addStock(computerModel);
+        shopModel.removeStock("Lenovo");
+        assertThat(shopModel.getComputerStock().size(), is(0));
+    }
+
 }

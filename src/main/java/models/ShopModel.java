@@ -2,6 +2,8 @@ package models;
 
 import java.util.ArrayList;
 
+import javax.swing.text.html.HTMLDocument.Iterator;
+
 public class ShopModel {
     String name;
     String owner;
@@ -52,5 +54,8 @@ public class ShopModel {
         computerStock.add(computerModel);
     }
 
+    public void removeStock(String brand) {
+        computerStock.removeIf(computerModel -> computerModel.getBrand().equals(brand));
+    }
     
 }
